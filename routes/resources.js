@@ -5,9 +5,12 @@ const db = require('../db/db')
 
 router.get('/', function (req, res) {
   db.getResources()
-  .then(function (result) {
-    console.log(result)
-    res.send(result)
+  .then(function (resources) {
+    console.log(resources)
+    res.send({resources: resources})
+  })
+  .catch(function (err) {
+    res.status(500).send('DATABASE ERROR: ' + err.message)
   })
 })
 
