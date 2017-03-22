@@ -1,0 +1,25 @@
+{
+  "name": "forager-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index",
+    "debug": "node --inspect --debug-brk index",
+    "test": "tape tests/**/*test.js | tap-diff"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alex-blair/forager-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alex-blair/forager-server/issues"
+  },
+  "homepage": "https://github.com/alex-blair/forager-server#readme",
+  "dependencies": {
+    "body-parser": "^1.17.1",
+    "path": "^0.12.7"
+  }
+}
