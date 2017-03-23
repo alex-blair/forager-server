@@ -7,7 +7,8 @@
     "start": "nodemon index",
     "debug": "node --inspect --debug-brk index",
     "test": "tape tests/**/*test.js | tap-diff",
-    "knex": "knex"
+    "knex": "knex",
+    "postinstall": "knex migrate:latest"
   },
   "repository": {
     "type": "git",
@@ -22,7 +23,8 @@
   "dependencies": {
     "body-parser": "^1.17.1",
     "knex": "^0.12.8",
-    "path": "^0.12.7"
+    "path": "^0.12.7",
+    "pg": "^6.1.5"
   },
   "devDependencies": {
     "sqlite3": "^3.1.8"
