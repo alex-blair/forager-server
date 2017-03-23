@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index",
+    "start": "node index",
+    "dev": "nodemon index",
     "debug": "node --inspect --debug-brk index",
     "test": "tape tests/**/*test.js | tap-diff",
     "knex": "knex"
@@ -27,6 +28,7 @@
     "pg": "^6.1.5"
   },
   "devDependencies": {
+    "nodemon": "^1.11.0",
     "sqlite3": "^3.1.8"
   }
 }
