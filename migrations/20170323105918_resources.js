@@ -3,8 +3,8 @@ exports.up = function(knex, Promise) {
   return knex.schema.createTableIfNotExists('resources', function (table) {
     table.increments('id').primary()
     table.string('type')
-    table.integer('lat')
-    table.integer('long')
+    table.decimal('lat')
+    table.decimal('long')
     table.integer('timestamp')
     table.string('notes')
   })
