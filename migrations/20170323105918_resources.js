@@ -1,15 +1,14 @@
-
-exports.up = function(knex, Promise) {
+exports.up = function (knex, Promise) {
   return knex.schema.createTableIfNotExists('resources', function (table) {
     table.increments('id').primary()
     table.string('type')
-    table.decimal('lat', 18, 6)
-    table.decimal('long', 18, 6)
-    table.integer('timestamp')
-    table.string('notes')
+    table.string('resource')
+    table.string('variety')
+    table.string('availabilityNorth')
+    table.string('availabilitySouth')
   })
 }
 
-exports.down = function(knex, Promise) {
+exports.down = function (knex, Promise) {
   return knex.schema.dropTableIfExists('resources')
 }
