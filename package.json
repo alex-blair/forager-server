@@ -8,6 +8,7 @@
     "dev": "nodemon index",
     "debug": "node --inspect --debug-brk index",
     "test": "tape tests/**/*test.js | tap-diff",
+    "postinstall": "knex migrate:latest",
     "knex": "knex"
   },
   "repository": {
