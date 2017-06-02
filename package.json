@@ -8,7 +8,7 @@
     "dev": "nodemon ./index.js --exec babel-node",
     "debug": "node --inspect --debug-brk index",
     "test": "standard",
-    "postinstall": "knex migrate:latest",
+    "migrate": "knex migrate:latest",
     "knex": "knex"
   },
   "repository": {
@@ -22,7 +22,6 @@
   },
   "homepage": "https://github.com/alex-blair/forager-server#readme",
   "dependencies": {
-    "apollo-server": "^0.3.3",
     "babel-cli": "^6.24.1",
     "babel-core": "^6.24.1",
     "babel-loader": "^7.0.0",
@@ -37,6 +36,7 @@
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.1",
+    "graphql-server-express": "^0.8.0",
     "graphql-tools": "^1.0.0",
     "knex": "^0.12.8",
     "path": "^0.12.7",
