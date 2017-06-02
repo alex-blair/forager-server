@@ -5,9 +5,9 @@
   "main": "index.js",
   "scripts": {
     "start": "node index",
-    "dev": "nodemon index",
+    "dev": "nodemon ./index.js --exec babel-node",
     "debug": "node --inspect --debug-brk index",
-    "test": "tape tests/**/*test.js | tap-diff",
+    "test": "standard",
     "postinstall": "knex migrate:latest",
     "knex": "knex"
   },
@@ -22,16 +22,29 @@
   },
   "homepage": "https://github.com/alex-blair/forager-server#readme",
   "dependencies": {
+    "apollo-server": "^0.3.3",
+    "babel-cli": "^6.24.1",
+    "babel-core": "^6.24.1",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-inline-import": "^2.0.4",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.17.1",
+    "deepmerge": "^1.3.2",
     "express": "^4.15.3",
     "express-graphql": "^0.6.6",
     "graphql": "^0.10.1",
+    "graphql-tools": "^1.0.0",
     "knex": "^0.12.8",
     "path": "^0.12.7",
     "pg": "^6.1.5"
   },
   "devDependencies": {
     "nodemon": "^1.11.0",
-    "sqlite3": "^3.1.8"
+    "sqlite3": "^3.1.8",
+    "standard": "^10.0.2"
   }
 }
