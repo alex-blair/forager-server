@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start": "node ./index.js",
-    "dev": "nodemon ./index.js --exec babel-node",
+    "start": "node ./lib/index.js",
+    "dev": "nodemon ./lib/index.js --exec babel-node",
     "debug": "node --inspect --debug-brk index",
     "test": "standard",
+    "build": "babel src -d lib",
     "migrate": "knex migrate:latest",
     "knex": "knex"
   },
@@ -47,5 +48,8 @@
     "nodemon": "^1.11.0",
     "sqlite3": "^3.1.8",
     "standard": "^10.0.2"
+  },
+  "engines": {
+    "node": ">=7.0.0"
   }
 }
