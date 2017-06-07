@@ -6,6 +6,11 @@ function getResources () {
   return knex('resources')
 }
 
+function getLocations () {
+  return knex('locations')
+}
+
 module.exports = {
-  getResources: getResources
+  getResources: getResources,
+  getLocations: getLocations
 }

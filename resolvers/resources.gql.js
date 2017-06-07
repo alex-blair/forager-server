@@ -2,9 +2,12 @@ const db = require('../db/')
 
 const typeDefs = `
   type Resource {
+    id: Int
+    category: String
+    item: String
     variety: String
-    type: String
-    resource: String
+    availabilityNorth: String
+    availabilitySouth: String
   }
 `
 
