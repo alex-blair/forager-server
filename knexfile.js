@@ -1,7 +1,4 @@
-'use strict';
-
 module.exports = {
-
   development: {
     client: 'sqlite3',
     connection: {
@@ -9,7 +6,13 @@ module.exports = {
     },
     useNullAsDefault: true
   },
-
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: ':memory:'
+    },
+    useNullAsDefault: true
+  },
   staging: {
     client: 'postgresql',
     connection: {
@@ -25,7 +28,6 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   },
-
   production: {
     client: 'postgresql',
     connection: process.env.DATABASE_URL,
@@ -37,5 +39,4 @@ module.exports = {
       tableName: 'knex_migrations'
     }
   }
-
-};
+}
