@@ -27,3 +27,12 @@ test('getResources gets all the resources', function (t) {
       t.is(actual, expected)
     })
 })
+
+test('getLocations gets all the locations', function (t) {
+  let expected = 2
+  return db.getResources(t.context.db)
+    .then(function (result) {
+      let actual = result.length
+      t.is(actual, expected)
+    })
+})
